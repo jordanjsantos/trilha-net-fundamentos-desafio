@@ -52,8 +52,8 @@ while (showMenu)
             break;
     }
 
-    Console.WriteLine("Press any key to continue...");
+    Console.WriteLine("\nPress any key to continue...");
     Console.ReadLine();
 }
 
-Console.WriteLine("End Of Line"); // Recalling the Master Control Program from the movie Tron!
+Console.WriteLine("End Of Line"); // Remembering the Master Control Program from the movie Tron!
