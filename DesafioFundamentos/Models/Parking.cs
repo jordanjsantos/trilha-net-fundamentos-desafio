@@ -21,27 +21,20 @@ namespace DesafioFundamentos.Models
 
         public void RemoveVehicle()
         {
-            Console.WriteLine("Enter the vehicle license plate to remove:");
+            Console.Write("\nEnter the vehicle license plate to remove: ");
+            string plate = Console.ReadLine();
 
-            // Pedir para o usuário digitar a placa e armazenar na variável placa
-            // *IMPLEMENTE AQUI*
-            string plate = "";
-
-            // Verifica se o veículo existe
+            // Check if the vehicle exists
             if (vehicles.Any(x => x.ToUpper() == plate.ToUpper()))
             {
-                Console.WriteLine("Enter the number of hours the vehicle was parked:");
+                Console.Write("Enter the number of hours the vehicle was parked: ");
 
-                // TODO: Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
-                // TODO: Realizar o seguinte cálculo: "precoInicial + precoPorHora * horas" para a variável valorTotal                
-                // *IMPLEMENTE AQUI*
-                int hours = 0;
-                decimal totalValue = 0; 
+                int hours = Convert.ToInt32(Console.ReadLine());
+                decimal totalValue = initialPrice + pricePerHour * hours;
 
-                // TODO: Remover a placa digitada da lista de veículos
-                // *IMPLEMENTE AQUI*
+                vehicles.Remove(plate);
 
-                Console.WriteLine($"The vehicle {plate} was removed and the total price was: R$ {totalValue}");
+                Console.WriteLine($"\nThe vehicle {plate} was removed and the total price was: R$ {totalValue}");
             }
             else
             {
@@ -57,6 +50,7 @@ namespace DesafioFundamentos.Models
                 Console.WriteLine("Parked vehicles are:");
                 // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
                 // *IMPLEMENTE AQUI*
+                
             }
             else
             {
