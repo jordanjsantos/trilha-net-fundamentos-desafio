@@ -1,6 +1,6 @@
 ﻿using DesafioFundamentos.Models;
 
-// Coloca o encoding para UTF8 para exibir acentuação
+// Set the encoding to UTF8 to display accents
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 decimal initialPrice = 0;
@@ -13,13 +13,13 @@ initialPrice = Convert.ToDecimal(Console.ReadLine());
 Console.Write("Now enter the price per hour: ");
 pricePerHour = Convert.ToDecimal(Console.ReadLine());
 
-// Instancia a classe Estacionamento, já com os valores obtidos anteriormente
+// Instantiate the Parking class, already with the values obtained previously
 Parking parking = new Parking(initialPrice, pricePerHour);
 
 string option = string.Empty;
 bool showMenu = true;
 
-// Realiza o loop do menu
+// Execute the menu loop
 while (showMenu)
 {
     Console.Clear();
